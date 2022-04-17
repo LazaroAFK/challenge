@@ -1,0 +1,25 @@
+{
+  "name": "standalone-app",
+  "version": "1.0.0",
+  "description": "Single article page, which allows you to post comments.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RainStudios/challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RainStudios/challenge/issues"
+  },
+  "homepage": "https://github.com/RainStudios/challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  }
+}
