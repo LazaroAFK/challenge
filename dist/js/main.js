@@ -48,11 +48,12 @@ function registerComment() {
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
+      messageInput.value = '';
+      loadComments();
     })
     .catch((error) => {
       console.log("Error:", error);
     });
-  loadComments();
 }
 
 // Add or remove the user vote.
@@ -71,11 +72,11 @@ function upvoteComment(commentId) {
     .then((response) => response.json())
     .then((data) => {
       console.log("Success:", data);
+      loadComments();
     })
     .catch((error) => {
       console.log("Error:", error);
     });
-  loadComments();
 }
 
 // Load last five comments.

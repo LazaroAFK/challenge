@@ -42,7 +42,7 @@ export default class Discussion{
     // Returns n comments.
     getComments(numberOfComments = 0){
         if(numberOfComments){
-            return this.#comments.slice(0, numberOfComments).reverse();
+            return [...this.#comments].reverse().slice(0, numberOfComments);
         }
         return this.#comments;
     }
