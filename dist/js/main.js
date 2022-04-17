@@ -1,7 +1,9 @@
+// Get objects from DOM.
 let messageInput = document.getElementById("message");
 let commentsBox = document.getElementById("commentsBox");
 let messageTemplate = document.getElementById("messageTemplate");
 
+// Fancy time format.
 function timeSince(date) {
   var seconds = Math.floor((new Date() - date) / 1000);
 
@@ -29,6 +31,7 @@ function timeSince(date) {
   return Math.floor(seconds) + " seconds ago";
 }
 
+// Register new comment.
 function registerComment() {
   let messageInput = document.getElementById("message");
   let data = {
@@ -52,6 +55,7 @@ function registerComment() {
   loadComments();
 }
 
+// Add or remove the user vote.
 function upvoteComment(commentId) {
   let data = {
     commentId: commentId,
@@ -74,6 +78,7 @@ function upvoteComment(commentId) {
   loadComments();
 }
 
+// Load last five comments.
 function loadComments() {
   fetch("http://localhost:3000/comments/5", {
     mode: "cors",
@@ -108,6 +113,7 @@ function loadComments() {
     });
 }
 
+// Upvote click event listener.
 commentsBox.addEventListener('click', function(e){
     let target = e.target;
     console.log(e);

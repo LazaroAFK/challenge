@@ -21,14 +21,14 @@ app.post('/new/comment', (req, res) => {
     const message = req.body.message;
 
     articleView.registerComment(message);
-    res.send('commented');
+    res.json({result: 'commented'});
 })
 
 app.post('/comment/upvote', (req, res) => {
     const commentId = req.body.commentId;
 
     articleView.upVoteComment(commentId);
-    res.send('voted');
+    res.json({result: 'voted'});
 });
 
 app.get('/comments/all', (req, res) => {

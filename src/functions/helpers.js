@@ -1,3 +1,4 @@
+// Create object from comment.
 function commentToObject(comments){
     return comments.map(comment => {
         return {
